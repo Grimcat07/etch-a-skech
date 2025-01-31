@@ -1,7 +1,13 @@
+body{
+    margin: 0%;
+}
 .body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: gray;
+    height: 100vh;
+    
 }
 .grid-box
 {
@@ -10,19 +16,20 @@
     padding: 0;
     box-sizing: border-box;
     border-style: solid;
-    border-width: 0.5px;
+    border-width: 0.1px;
     border-color: white;
 
 }
 .container
 {
-    background-color: aqua;
+    background-color: gray;
     display: flex;
     width: 600px;
     height: 600px;
     flex-wrap: wrap;
-    padding: 0%;
-    margin: 0%;
-    flex-grow: 0;
 }
-
+.buttons
+{
+    display: flex;
+    gap: 20px;
+}

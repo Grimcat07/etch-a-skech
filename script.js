@@ -32,15 +32,14 @@ function createBox(num){
         container.appendChild(div);
         boxsquare--;
     }
+    divs.forEach((div)=>{
+    div.addEventListener("mouseover",()=>
+        {div.style.backgroundColor="darkgray"});
+});
 }
 createBox(16);
-console.log(divs);
-divs.forEach((div)=>{
-    div.addEventListener("mouseover",()=>
-        {div.style.backgroundColor="white"});
-    div.addEventListener("mouseout",()=>
-    {
-        div.style.backgroundColor="black";
-    });
-    
-});
+const reset=document.querySelector(".reset-button");
+reset.addEventListener("click",()=>{
+    container.innerHTML="";
+    createBox(16);
+})

@@ -34,7 +34,7 @@ function createBox(num){
     }
     divs.forEach((div)=>{
     div.addEventListener("mouseover",()=>
-        {div.style.backgroundColor="darkgray"});
+        {div.style.backgroundColor=randomColor()});
 });
 }
 createBox(16);
@@ -43,3 +43,11 @@ reset.addEventListener("click",()=>{
     container.innerHTML="";
     createBox(16);
 })
+function randomColor(){
+    let codes="0123456789ABCDEF";
+    let color="#";
+    for (let i = 0; i < 6; i++) {
+        color +=codes[Math.floor(Math.random()*codes.length)];
+    }
+    return color;
+}
